@@ -1,0 +1,429 @@
+C:\Users\TEMP.DESKTOP-E57K9A6.091>mongosh
+"mongodb+srv://cluster0.hxmnvfr.mongodb.net/test"
+--apiVersion 1 --username satwik
+
+Enter password: ********
+                                                 Current Mongosh Log
+ID: 6439d7417991609bf12a860e
+                             Connecting to:
+mongodb+srv://<credentials>@cluster0.hxmnvfr.mongodb.net/myFirstDatabase?appName=mongosh+1.8.0
+ MongoServerSelectionError: certificate is not yet valid
+
+
+                            C:\Users\TEMP.DESKTOP-E57K3T6.091>mongosh
+"mongodb+srv://cluster0.hxmnvfr.mongodb.net/demo" --apiVersion 1
+--username satwik
+                                                              Enter
+password: ********
+                                           Current Mongosh Log ID:
+6439d7d1f0dc34a40d976e14
+                         Connecting to:
+mongodb+srv://<credentials>@cluster0.hxmnvfr.mongodb.net/demo?appName=mongosh+1.8.0
+            MongoServerSelectionError: certificate is not yet valid
+
+
+
+C:\Users\TEMP.DESKTOP-E57K3T6.091>mongosh
+"mongodb+srv://cluster0.hxmnvfr.mongodb.net/DEMO" --apiVersion 1
+--username satwik
+                                                              Enter
+password: ********
+                                           Current Mongosh Log ID:
+6439d80d1a38c0e01b328a5d
+                         Connecting to:
+mongodb+srv://<credentials>@cluster0.hxmnvfr.mongodb.net/DEMO?appName=mongosh+1.8.0
+            MongoServerSelectionError: certificate is not yet valid
+
+
+
+C:\Users\TEMP.DESKTOP-E57K3T6.091>mongosh
+"mongodb+srv://cluster0.hxmnvfr.mongodb.net/demo" --apiVersion 1
+--username satwik
+                                                              Enter
+password: ********
+                                           Current Mongosh Log ID:
+643a25c9bf5369d4eb47f62b
+                         Connecting to:
+mongodb+srv://<credentials>@cluster0.hxmnvfr.mongodb.net/demo?appName=mongosh+1.8.0
+            Using MongoDB:          6.0.5 (API Version 1)
+                                                             Using
+Mongosh:          1.8.0
+
+
+                     For mongosh info see:
+https://docs.mongodb.com/mongodb-shell/
+
+
+
+                                                      To help improve
+our products, anonymous usage data is collected and sent to MongoDB
+periodically (https://www.mongodb.com/legal/privacy-policy).
+
+              You can opt-out by running the disableTelemetry()
+command.
+
+                                                Atlas
+atlas-67xjce-shard-0 [primary] demo> db.student.insert({usn:1,
+age:21,cont:9876, email:"antara.ds19@gmail.com"});
+
+                             DeprecationWarning: Collection.insert()
+is deprecated. Use insertOne, insertMany, or bulkWrite.
+         {
+
+acknowledged: true,
+                                                 insertedIds: { '0':
+ObjectId("643a266eaa32d0dc68c7c240") }
+                           }
+
+     Atlas atlas-67xjce-shard-0 [primary] demo>
+db.student.insert({usn:2, age:22,cont:9976,
+email:"anushka.ds19@gmail.com"});
+
+           {
+
+acknowledged: true,
+                                                 insertedIds: { '0':
+ObjectId("643a26a1aa32d0dc68c7c241") }
+                           }
+
+     Atlas atlas-67xjce-shard-0 [primary] demo>
+db.student.insert({usn:3, age:21,cont:5576,
+email:"anubhav.ds19@gmail.com"});
+
+           {
+
+acknowledged: true,
+                                                 insertedIds: { '0':
+ObjectId("643a26d6aa32d0dc68c7c242") }
+                           }
+
+     Atlas atlas-67xjce-shard-0 [primary] demo>
+db.student.insert({usn:4, age:20,cont:4476,
+email:"pani.ds19@gmail.com"});   {
+
+             acknowledged: true,
+
+insertedIds: { '0': ObjectId("643a26fcaa32d0dc68c7c243") }
+                                               }
+
+                         Atlas atlas-67xjce-shard-0 [primary] demo>
+db.student.insert({usn:10, age:23,cont:2276,
+email:"rekha.ds19@gmail.com"});
+
+          {
+
+acknowledged: true,
+                                                 insertedIds: { '0':
+ObjectId("643a274aaa32d0dc68c7c244") }
+                           }
+
+     Atlas atlas-67xjce-shard-0 [primary] demo> db.student.find()
+                                                      [
+
+                                  {
+
+              _id: ObjectId("643a266eaa32d0dc68c7c240"),
+                                                               usn: 1,
+
+                                         age: 21,
+
+                   cont: 9876,
+
+email: 'antara.ds19@gmail.com'
+                                               },
+
+                         {
+
+     _id: ObjectId("643a26a1aa32d0dc68c7c241"),
+                                                      usn: 2,
+
+                                age: 22,
+
+          cont: 9976,
+                                                           email:
+'anushka.ds19@gmail.com'
+                                        },
+
+                  {
+
+_id: ObjectId("643a26d6aa32d0dc68c7c242"),
+                                                 usn: 3,
+
+                           age: 21,
+
+     cont: 5576,
+                                                      email:
+'anubhav.ds19@gmail.com'
+                                        },
+
+                  {
+
+_id: ObjectId("643a26fcaa32d0dc68c7c243"),
+                                                 usn: 4,
+
+                           age: 20,
+
+     cont: 4476,
+                                                      email:
+'pani.ds19@gmail.com'
+                                        },
+
+                  {
+
+_id: ObjectId("643a274aaa32d0dc68c7c244"),
+                                                 usn: 10,
+
+                           age: 23,
+
+     cont: 2276,
+                                                      email:
+'rekha.ds19@gmail.com'
+                                        }
+
+                ]
+                                                                 Atlas
+atlas-67xjce-shard-0 [primary] demo>
+db.student.update({usn:10},{$set:{email:"Abhinav@gmail.com"}})
+      DeprecationWarning: Collection.update() is deprecated. Use
+updateOne, updateMany, or bulkWrite.                         {
+
+                                         acknowledged: true,
+
+                   insertedId: null,
+
+matchedCount: 1,
+                                                 modifiedCount: 1,
+
+                           upsertedCount: 0
+
+   }
+                                                    Atlas
+atlas-67xjce-shard-0 [primary] demo>
+db.student.insert({usn:11,age:22,name:"abc",cont:2276,email:"rea.ds19@gmail.com
+"});
+                                              {
+
+                          acknowledged: true,
+
+    insertedIds: { '0': ObjectId("643a2b10aa32d0dc68c7c245") }
+                                                   }
+
+                             Atlas atlas-67xjce-shard-0 [primary]
+demo> db.student.drop()
+            true
+                                                             Atlas
+atlas-67xjce-shard-0 [primary] demo>
+db.Customers.insert({cust_id:1,Balance:200, Type:"S"});
+      {
+                                                         acknowledged:
+true,
+                                   insertedIds: { '0':
+ObjectId("643a2db3aa32d0dc68c7c246") }
+                           }
+     Atlas atlas-67xjce-shard-0 [primary] demo>
+
+
+                                Atlas atlas-67xjce-shard-0 [primary]
+demo> db.Customers.insert({cust_id:1,Balance:1000, Type:"Z"})
+            {
+
+acknowledged: true,
+                                                 insertedIds: { '0':
+ObjectId("643a2db3aa32d0dc68c7c247") }
+                           }
+
+     Atlas atlas-67xjce-shard-0 [primary] demo>
+
+
+                                Atlas atlas-67xjce-shard-0 [primary]
+demo> db.Customers.insert({cust_id:2,Balance:100, Type:"Z"});
+            {
+
+acknowledged: true,
+                                                 insertedIds: { '0':
+ObjectId("643a2db5aa32d0dc68c7c248") }
+                           }
+
+     Atlas atlas-67xjce-shard-0 [primary] demo>
+
+
+                                Atlas atlas-67xjce-shard-0 [primary]
+demo> db.Customers.insert({cust_id:2,Balance:1000, Type:"C"});
+            {
+
+acknowledged: true,
+                                                 insertedIds: { '0':
+ObjectId("643a2db8aa32d0dc68c7c249") }
+                           }
+
+     Atlas atlas-67xjce-shard-0 [primary] demo>
+
+
+                                Atlas atlas-67xjce-shard-0 [primary]
+demo> db.Customers.insert({cust_id:2,Balance:500, Type:"C"});
+            {
+
+acknowledged: true,
+                                                 insertedIds: { '0':
+ObjectId("643a2db8aa32d0dc68c7c24a") }
+                           }
+
+     Atlas atlas-67xjce-shard-0 [primary] demo>
+
+
+                                Atlas atlas-67xjce-shard-0 [primary]
+demo> db.Customers.insert({cust_id:2,Balance:50, Type:"S"});
+            {
+
+acknowledged: true,
+                                                 insertedIds: { '0':
+ObjectId("643a2db9aa32d0dc68c7c24b") }
+                           }
+
+     Atlas atlas-67xjce-shard-0 [primary] demo>
+
+
+                                Atlas atlas-67xjce-shard-0 [primary]
+demo> db.Customers.insert({cust_id:3,Balance:500, Type:"Z"});
+            {
+
+acknowledged: true,
+                                                 insertedIds: { '0':
+ObjectId("643a2dc0aa32d0dc68c7c24c") }
+                           }
+
+     Atlas atlas-67xjce-shard-0 [primary] demo> DB.Customers.find()
+                                                      ReferenceError:
+DB is not defined
+                                 Atlas atlas-67xjce-shard-0 [primary]
+demo> db.Customers.find()
+            [
+                                                               {
+
+                                           _id:
+ObjectId("643a2db3aa32d0dc68c7c246"),
+                                            cust_id: 1,
+
+                      Balance: 200,
+
+Type: 'S'
+                                               },
+
+                         {
+
+     _id: ObjectId("643a2db3aa32d0dc68c7c247"),
+                                                      cust_id: 1,
+
+                                Balance: 1000,
+
+          Type: 'Z'
+                                                         },
+
+                                   {
+
+               _id: ObjectId("643a2db5aa32d0dc68c7c248"),
+
+cust_id: 2,
+                                                 Balance: 100,
+
+                           Type: 'Z'
+
+   },
+                                                    {
+
+                                _id:
+ObjectId("643a2db8aa32d0dc68c7c249"),
+                                            cust_id: 2,
+
+                      Balance: 1000,
+
+Type: 'C'
+                                               },
+
+                         {
+
+     _id: ObjectId("643a2db8aa32d0dc68c7c24a"),
+                                                      cust_id: 2,
+
+                                Balance: 500,
+
+          Type: 'C'
+                                                         },
+
+                                   {
+
+               _id: ObjectId("643a2db9aa32d0dc68c7c24b"),
+
+cust_id: 2,
+                                                 Balance: 50,
+
+                           Type: 'S'
+
+   },
+                                                    {
+
+                                _id:
+ObjectId("643a2dc0aa32d0dc68c7c24c"),
+                                            cust_id: 3,
+
+                      Balance: 500,
+
+Type: 'Z'
+                                               }
+
+                       ]
+
+ Atlas atlas-67xjce-shard-0 [primary] demo> db.Customers.aggregate (
+                                                  ...
+{$match:{Type:"Z"}},
+                                             ...
+
+                       ... {$group : { _id : "$cust_id",
+
+ ...
+                                                  ... TotAccBal
+:{$sum:"$Balance"} } },
+                                   ...
+{$match:{TotAccBal:{$gt:1200}}});
+
+
+                       Atlas atlas-67xjce-shard-0 [primary] demo>
+db.Customers.aggregate( { $match: { Type: "Z" } }, { $group: { _id:
+"$cust_id", TotAccBal: { $sum: "$Balance" } } }, { $match: {
+TotAccBal: { $gt: 1200 } } });
+
+                                              Atlas
+atlas-67xjce-shard-0 [primary] demo> db.Customers.aggregate( { $match:
+{ Type: "Z" } }, { $group: { _id: "$cust_id", TotAccBal: { $sum:
+"$Balance" } } }, { $match: { TotAccBal: { $gt: 100 } } });
+                           [ { _id: 3, TotAccBal: 500 }, { _id: 1,
+TotAccBal: 1000 } ]
+         Atlas atlas-67xjce-shard-0 [primary] demo>
+db.Customers.aggregate (
+      ...
+                                                       ... {$group : {
+_id : "$cust_id",
+                                 ...
+
+           ... minAccBal :{$min:"$Balance"},
+                                                            ...
+maxAccBal :{$max:"$Balance"} }});
+                                             [
+
+                         { _id: 1, minAccBal: 200, maxAccBal: 1000 },
+
+   { _id: 2, minAccBal: 50, maxAccBal: 1000 },
+                                                    { _id: 3,
+minAccBal: 500, maxAccBal: 500 }
+                                     ]
+
+               Atlas atlas-67xjce-shard-0 [primary] demo>
+db.Customers.aggregate( { $group: { _id: "$cust_id", minAccBal: {
+$min: "$Balance" }, maxAccBal: { $max: "$Balance" } } });
+                                                            [
+
+                                        { _id: 2, minAccBal: 50,
+maxAccBal: 1000 },
+                        { _id: 3, minAccBal: 500, maxAccBal: 500 },
+
+  { _id: 1, minAccBal: 200, maxAccBal: 1000 }
